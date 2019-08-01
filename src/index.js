@@ -6,7 +6,7 @@ const multer = require('multer')
 const sharp = require('sharp')
 const cors = require('cors')
 
-mongoose.connect('mongodb://127.0.0.1:27017/jc-mongoose', {
+mongoose.connect('mongodb+srv://weldi9:weldi123@weldicluster-ctyjg.mongodb.net/weldi9?retryWrites=true&w=majority', {
 
     //mongodb+srv://weldi9:weldi123@weldicluster-ctyjg.mongodb.net/weldi9?retryWrites=true&w=majority
     //parser string url
@@ -15,7 +15,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/jc-mongoose', {
 })
 
 const app = express()
-const port = 2019
+const port = process.env.PORT || 2019
 
 app.use(express.json())
 app.use(cors())
